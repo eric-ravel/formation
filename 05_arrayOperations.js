@@ -10,8 +10,9 @@
  * 
   */
 
-const multiplyByTwo = (array) => {}
+const multiplyByTwo = (array) => array.map((a) => a * 2);
 
+console.log(multiplyByTwo([1, 2, 3, 4]));
 
 /**
  * Utiliser la fonction .filter sur le tableau passé en paramètre
@@ -23,7 +24,9 @@ const multiplyByTwo = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const filterNameStartByA = (array) => {}
+const filterNameStartByA = (array) => array.filter( mot => mot[0] === "A" );
+
+console.log(filterNameStartByA(["toto", "titi", "Atata", "Akadoc"]));
 
 /**
  * Utiliser la fonction .reduce sur le tableau passé en paramètre
@@ -35,7 +38,9 @@ const filterNameStartByA = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const sum = (array) => {}
+const sum = (array) => array.reduce((acc, i) => acc + i, 0);
+
+console.log(sum([1,2,3,4]));
 
 /**
  * Utiliser la fonction .find sur le tableau passé en paramètre
@@ -56,7 +61,15 @@ const sum = (array) => {}
  *   - Vous ne pouvez pas utiliser de variable (autre que l'argument de la fonction)
   */
 
-const findUserById = (array, id) => {}
+let Users = [
+    {id: 1, name: 'John'},
+    {id: 2, name: 'Doe'},
+    {id: 3, name: 'Foo'},
+    {id: 4, name: 'Bar'},
+ ]
 
+const findUserById = (array, id) => array.find((user) => user.id === id).name;
+
+console.log(findUserById(Users, 4));
 
 module.exports = {multiplyByTwo, filterNameStartByA, sum, findUserById};
