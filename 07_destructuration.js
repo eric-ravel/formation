@@ -11,6 +11,7 @@
  *  - interdiction d'utiliser [0] et [1]
  *  - interdiction d'utiliser slice ou splice
  */
+let tab = [1, 2, 3];
 
 const extractFirstTwo = () => {}
 
